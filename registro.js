@@ -4,5 +4,5 @@ passwordUsuario = "";
 rolUsuario = "";
 
 if (nombreUsuario){
-    console.log(`Bienvenido, ${nombreUsuario}`);
+    console.log(`Bienvenido querido usuario: , ${nombreUsuario}`);
 }
