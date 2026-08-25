@@ -1,64 +1,32 @@
-const usuarioCorrecto = 'admin';
-const passwordCorrecto = '1234';
-let intentosFallidos = 0;
-let bloqueado = false;
 
-function validarCredenciales(usuario, password) {
-  if (usuario === usuarioCorrecto && password === passwordCorrecto) {
-    return true;
-  }
-  return false;
-}
 
-function mostrarMensaje(mensaje, tipo) {
-  const mensajeBox = document.getElementById('mensaje');
-  mensajeBox.textContent = mensaje;
-  mensajeBox.className = tipo;
-}
+const usuario = "Maria";
+const password= "1234";
+let intentos = 0;
+let maxIntentos = 3;
+let acceso = false;
 
-function bloquearFormulario() {
-  const boton = document.getElementById('loginBtn');
-  const usuario = document.getElementById('usuario');
-  const password = document.getElementById('password');
+console.log("Usuario ingresado: " + usuario);
+console.log("Contraseña ingresada: " + password);
+console.log("Acceso concedido. Bienvenido, " + usuario);
 
-  boton.disabled = true;
-  usuario.disabled = true;
-  password.disabled = true;
-  bloqueado = true;
-}
+/*while (intentos < maxIntentos && acceso == false) {
+  
 
-function iniciarSesion(evento) {
-  evento.preventDefault();
+  let usuarioIngresado = prompt("Ingrese su nombre de usuario:");
+  let passwordIngresada = prompt("Ingrese su contraseña:");
 
-  if (bloqueado) {
-    mostrarMensaje('La cuenta está bloqueada por exceder los 3 intentos fallidos.', 'error');
-    return;
-  }
-
-  const usuario = document.getElementById('usuario').value.trim();
-  const password = document.getElementById('password').value.trim();
-
-  console.log('Usuario ingresado:', usuario);
-  console.log('Contraseña ingresada:', password);
-
-  if (validarCredenciales(usuario, password)) {
-    mostrarMensaje('Acceso permitido. Bienvenido ' + usuario + '.', 'success');
-    return;
-  }
-
-  intentosFallidos += 1;
-
-  if (intentosFallidos < 3) {
-    mostrarMensaje('Datos incorrectos. Intento fallido ' + intentosFallidos + ' de 3.', 'error');
-    return;
-  }
-
-  while (intentosFallidos >= 3) {
-    mostrarMensaje('Se superaron los 3 intentos fallidos. Cuenta bloqueada.', 'error');
-    bloquearFormulario();
-    break;
+  if (usuarioIngresado == usuario && passwordIngresada == password) {
+    acceso = true; 
+    document.write("<h2>Acceso concedido. Bienvenido, " + usuarioIngresado + "</h2>");
+  } else {
+    intentos = intentos + 1;
+    document.write("<p>Intento " + intentos + " de " + maxIntentos + ": usuario o contraseña incorrectos.</p>");
   }
 }
 
-document.getElementById('loginForm').addEventListener('submit', iniciarSesion);
+if (acceso == false) {
+  document.write("<h2>>Ha superado el número máximo de intentos. Cuenta bloqueada.</h2>");
+}
+*/
 
