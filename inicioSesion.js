@@ -1,18 +1,11 @@
-
-
 const usuario = "Maria";
 const password= "1234";
 let intentos = 0;
 let maxIntentos = 3;
 let acceso = false;
 
-console.log("Usuario ingresado: " + usuario);
-console.log("Contraseña ingresada: " + password);
-console.log("Acceso concedido. Bienvenido, " + usuario);
-
-/*while (intentos < maxIntentos && acceso == false) {
+while (intentos < maxIntentos && acceso == false) {
   
-
   let usuarioIngresado = prompt("Ingrese su nombre de usuario:");
   let passwordIngresada = prompt("Ingrese su contraseña:");
 
@@ -28,5 +21,5 @@ console.log("Acceso concedido. Bienvenido, " + usuario);
 if (acceso == false) {
   document.write("<h2>>Ha superado el número máximo de intentos. Cuenta bloqueada.</h2>");
 }
-*/
+
 
