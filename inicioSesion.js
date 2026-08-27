@@ -19,7 +19,7 @@ while (intentos < maxIntentos && acceso == false) {
 }
 
 if (acceso == false) {
-  document.write("<h2>>Ha superado el número máximo de intentos. Cuenta bloqueada.</h2>");
+  document.write("<h2>Ha superado el número máximo de intentos. Cuenta bloqueada.</h2>");
 }
 
 
